@@ -6,7 +6,6 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 // 导入国际化中的中文配置
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
-
 import App from './App.vue'
 import router from './router'
 
@@ -16,6 +15,6 @@ app.use(createPinia())
 app.use(router)
 // 注册使用框架,并配置框架默认语言为中文
 app.use(ElementPlus, {
-    locale: zhCn,
-  })
+  locale: zhCn
+})
 app.mount('#app')
