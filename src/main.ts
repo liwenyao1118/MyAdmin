@@ -11,6 +11,8 @@ import router from './router'
 import 'virtual:svg-icons-register'
 // 导入自定义全局注册组件的插件
 import globalComponents from '@/components/globalComponents'
+// 导入项目的样式文件
+import '@/styles/index.scss'
 const app = createApp(App)
 
 app.use(createPinia())
