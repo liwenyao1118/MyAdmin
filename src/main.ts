@@ -8,7 +8,9 @@ import 'element-plus/dist/index.css'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import App from './App.vue'
 import router from './router'
-
+import 'virtual:svg-icons-register'
+// 导入自定义全局注册组件的插件
+import globalComponents from '@/components/globalComponents'
 const app = createApp(App)
 
 app.use(createPinia())
@@ -17,4 +19,6 @@ app.use(router)
 app.use(ElementPlus, {
   locale: zhCn
 })
+// 安装自定义插件
+app.use(globalComponents)
 app.mount('#app')
