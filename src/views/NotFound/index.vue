@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <h3>404</h3>
 </template>
 <script setup></script>
 <style scoped></style>
