@@ -6,6 +6,8 @@ import vue from '@vitejs/plugin-vue'
 import VueDevTools from 'vite-plugin-vue-devtools'
 // 引入mock-dev-server插件
 import mockDevServerPlugin from 'vite-plugin-mock-dev-server'
+// 引入组件name属性名插件
+import vueSetupExtend from 'vite-plugin-vue-setup-path-extend'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -39,6 +41,9 @@ export default defineConfig({
           return part.originalFilename!
         }
       }
+    }),
+    vueSetupExtend({
+      name: true//启用名称扩展
     })
   ],
   // 配置vite集成服务器
