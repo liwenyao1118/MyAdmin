@@ -1,4 +1,8 @@
 import axios from 'axios'
+// 引入进度条对象
+import NProgress from 'nprogress'
+// 引入进度条样式
+import 'nprogress/nprogress.css'
 // 用作系统提示的组件
 import { ElMessage } from 'element-plus'
 // 创建一个定制的新实例
@@ -10,6 +14,8 @@ const request = axios.create({
 })
 // 配置请求拦截器
 request.interceptors.request.use((config) => {
+  // 进度条开始
+  NProgress.start()
   // config包含请求相关的信息，并且其中的headers通常用来携带接口的公共数据
   return config
 })
@@ -17,10 +23,14 @@ request.interceptors.request.use((config) => {
 request.interceptors.response.use(
   (res) => {
     // 请求成功时
+    // 进度条结束
+    NProgress.done()
     // 简化响应数据
     return res.data
   },
   (err) => {
+    // 进度条结束
+    NProgress.done()
     // 遇到错误时,获取错误的相应状态码
     const code = err.response.status
     // 通过相应状态码给予提示
