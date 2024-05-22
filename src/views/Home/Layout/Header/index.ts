@@ -25,15 +25,15 @@ export const usehandler = function () {
     }, 0)
   }
   //   全屏处理函数
-  function requestFullScreen (){
+  function requestFullScreen() {
     // 判断当前是否为全屏
-    if(!document.fullscreenElement){
-        // 如果当前没有全屏，则实现全屏功能
-        document.documentElement.requestFullscreen()
-    }else {
-        // 如果当前已经全屏，则点击变为退出全屏
-        document.exitFullscreen()
+    if (!document.fullscreenElement) {
+      // 如果当前没有全屏，则实现全屏功能
+      document.documentElement.requestFullscreen()
+    } else {
+      // 如果当前已经全屏，则点击变为退出全屏
+      document.exitFullscreen()
     }
   }
-  return { foldMenu, foldMenuState, refresh,requestFullScreen }
+  return { foldMenu, foldMenuState, refresh, requestFullScreen }
 }

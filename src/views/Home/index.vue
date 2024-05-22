@@ -75,7 +75,7 @@ emitter.on('refresh', (data: any) => {
     width: 56px;
   }
   .header {
-    position:relative;
+    position: relative;
     background-color: #fff;
     height: $headbar_height;
     box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;

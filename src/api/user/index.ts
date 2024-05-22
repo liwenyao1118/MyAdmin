@@ -8,7 +8,7 @@ enum API {
   USERINFO_URL = '/user/info'
 }
 // 获取验证码
-export function reqVerificationCode(){
+export function reqVerificationCode() {
   return request({
     url: API.Verification_Code,
     method: 'get'
